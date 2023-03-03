@@ -19,7 +19,7 @@ function Dashboardpage({
   session: Session;
 }) {
   return (
-    <div>
+    <>
       <Head>
         <title>{`${session?.user.username}'s Dashboard`}</title>
       </Head>
@@ -64,7 +64,7 @@ function Dashboardpage({
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

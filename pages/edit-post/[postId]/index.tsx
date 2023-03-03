@@ -12,7 +12,7 @@ function EditPostPage({ data: post, postId }: { data: Post; postId: string }) {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>{`Edit ${post?.title}`}</title>
       </Head>
@@ -21,7 +21,7 @@ function EditPostPage({ data: post, postId }: { data: Post; postId: string }) {
       <div className="mt-5">
         <PostForm initialState={initialState} formType="edit" postId={postId} />
       </div>
-    </div>
+    </>
   );
 }
 

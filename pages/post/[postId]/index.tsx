@@ -22,7 +22,7 @@ function SinglePostpage({
   const myId = session?.user.id;
 
   return (
-    <div className="">
+    <>
       <Head>
         <title>{post.title}</title>
       </Head>
@@ -109,7 +109,7 @@ function SinglePostpage({
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
