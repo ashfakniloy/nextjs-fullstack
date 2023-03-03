@@ -1,13 +1,10 @@
-import type { GetServerSideProps, Metadata } from "next";
-import { notFound } from "next/navigation";
+import type { GetServerSideProps } from "next";
+import Head from "next/head";
+
 import PostForm from "../../../components/PostForm";
 import { prisma } from "../../../lib/prisma";
 
 function EditPostPage({ data: post, postId }: { data: Post; postId: string }) {
-  // if (!post) {
-  //   notFound();
-  // }
-
   const initialState = {
     title: post?.title,
     category: post?.category,
@@ -16,6 +13,10 @@ function EditPostPage({ data: post, postId }: { data: Post; postId: string }) {
 
   return (
     <div>
+      <Head>
+        <title>{`Edit ${post?.title}`}</title>
+      </Head>
+
       <h4 className="text-2xl text-gray-400 font-bold">Edit {post?.title}</h4>
       <div className="mt-5">
         <PostForm initialState={initialState} formType="edit" postId={postId} />

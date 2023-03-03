@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Navbar from "../components/Navbar";
 import { usePathname } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react";
+import NextNProgress from "nextjs-progressbar";
 import Log from "../components/Log";
 
 const inter = Inter({
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className={inter.className}>
+      <NextNProgress color="#F40009" options={{ showSpinner: false }} />
       <Toaster
         toastOptions={{
           duration: 3000,

@@ -1,15 +1,10 @@
 import Link from "next/link";
-
-// import { getServerSession } from "next-auth/next";
-
 import type { GetServerSideProps } from "next";
 import DeletePost from "../../components/DeletePost";
 import { prisma } from "../../lib/prisma";
-import { useSession } from "next-auth/react";
 import { getServerSession, Session } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]";
-
-export const dynamic = "force-dynamic";
+import Head from "next/head";
 
 type PostInfo = {
   id: string;
@@ -25,6 +20,10 @@ function Dashboardpage({
 }) {
   return (
     <div>
+      <Head>
+        <title>{`${session?.user.username}'s Dashboard`}</title>
+      </Head>
+
       <h4 className="text-2xl text-gray-400 font-bold">User Dashboard</h4>
       <div className="mt-5">
         <p className="text-xl text-gray-400">User Details</p>

@@ -1,8 +1,9 @@
-import { GetServerSideProps } from "next";
+import type { GetServerSideProps } from "next";
 import Pagination from "../components/Pagination";
 import Post from "../components/Post";
 import Search from "../components/Search";
 import { prisma } from "../lib/prisma";
+import Head from "next/head";
 
 const PER_PAGE = 5;
 
@@ -17,8 +18,9 @@ function Homepage({
 }) {
   return (
     <div className="">
-      {/* temporary fix for page showing stale data when navigating with broswer back/forward button  */}
-      {/* <RefreshPage /> */}
+      <Head>
+        <title>NextJS Fullstack Practice</title>
+      </Head>
 
       <Search />
 

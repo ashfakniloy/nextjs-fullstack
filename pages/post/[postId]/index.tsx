@@ -8,6 +8,7 @@ import LikeButton from "../../../components/LikeButton";
 import CommentsForm from "../../../components/CommentsForm";
 import DeleteComment from "../../../components/DeleteComment";
 import { authOptions } from "../../api/auth/[...nextauth]";
+import Head from "next/head";
 
 function SinglePostpage({
   post,
@@ -22,6 +23,10 @@ function SinglePostpage({
 
   return (
     <div className="">
+      <Head>
+        <title>{post.title}</title>
+      </Head>
+
       <Back />
       <h4 className="text-2xl text-gray-200 font-bold">{post.title}</h4>
       <p className="">
