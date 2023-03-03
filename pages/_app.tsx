@@ -25,7 +25,9 @@ function MyApp({ Component, pageProps }) {
       />
       <SessionProvider session={pageProps.session}>
         {pathname !== "/signup" && pathname !== "/signin" && <Navbar />}
-        <Component {...pageProps} />
+        <div className="mb-5">
+          <Component {...pageProps} />
+        </div>
       </SessionProvider>
 
       <Log />
