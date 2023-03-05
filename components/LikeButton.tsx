@@ -116,7 +116,7 @@ function LikeButton({
               <div className="flex items-center justify-between py-2 px-3">
                 <p className="self-center ">All Likes</p>
                 <button
-                  className="scale-75 rounded-full bg-gray-600 hover:bg-gray-600/50 p-1"
+                  className="scale-75 rounded-full bg-gray-700 hover:bg-gray-700/50 p-1"
                   onClick={() => setShowLikes(false)}
                 >
                   <ClearIcon />

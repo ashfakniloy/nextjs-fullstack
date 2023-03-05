@@ -31,7 +31,7 @@ function Navbar() {
       ) : (
         <div className="mt-5 lg:mt-0 text-sm font-medium space-x-7">
           <Link href="/signup">
-            <button className="bg-cyan-900 px-2 py-1.5 rounded">Signup</button>
+            <button className="bg-green-900 px-2 py-1.5 rounded">Signup</button>
           </Link>
           <Link href="/signin">
             <button className="bg-blue-900 px-2 py-1.5 rounded">Login</button>

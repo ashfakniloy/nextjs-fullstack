@@ -13,6 +13,7 @@ function SigninPage() {
   useEffect(() => {
     if (status === "authenticated") {
       router.replace("/");
+      // router.back();
     }
   }, [router, status]);
 
@@ -66,7 +67,7 @@ function SigninPage() {
         </Head>
 
         <div className="min-h-screen flex justify-center items-center">
-          <div className="bg-gray-800/40 rounded-lg px-5 sm:px-10 py-10 w-full max-w-[420px]">
+          <div className="bg-gray-900/40 rounded-lg px-5 sm:px-10 py-10 w-full max-w-[420px]">
             <p className="text-center text-2xl font-bold text-gray-300">
               Sign In
             </p>
@@ -103,7 +104,7 @@ function SigninPage() {
               <div className="pt-4">
                 <button
                   type="submit"
-                  className=" w-full bg-cyan-800  py-3 rounded text-sm font-bold text-gray-200 active:scale-95 transition duration-200"
+                  className=" w-full bg-cyan-900  py-3 rounded text-sm font-bold text-gray-200 active:scale-95 transition duration-200"
                 >
                   Submit
                 </button>

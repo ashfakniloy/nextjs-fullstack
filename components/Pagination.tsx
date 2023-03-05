@@ -65,7 +65,7 @@ function Pagination({
   };
 
   return (
-    <div className="flex justify-center items-center gap-2 text-sm">
+    <div className="mb-5 flex justify-center items-center gap-2 text-sm">
       <button
         className="paginateButton"
         onClick={handleFirst}
@@ -93,9 +93,9 @@ function Pagination({
           // </Link>
           <button
             key={i}
-            className={`px-3.5 py-2 border first:border-l border-l-0 border-gray-500 hover:bg-gray-800 disabled:cursor-not-allowed ${
+            className={`px-3.5 py-2 border first:border-l border-l-0 border-gray-500 hover:bg-gray-700 disabled:cursor-not-allowed ${
               page === pageParam || (page === 1 && !pageParam)
-                ? "bg-gray-800"
+                ? "bg-gray-700"
                 : "bg-transparent"
             }`}
             onClick={() => handlePaginate(page)}

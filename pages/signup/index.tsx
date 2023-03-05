@@ -12,6 +12,7 @@ function SignupPage() {
   useEffect(() => {
     if (status === "authenticated") {
       router.replace("/");
+      // router.back();
     }
   }, [router, status]);
 
@@ -75,7 +76,7 @@ function SignupPage() {
         </Head>
 
         <div className="min-h-screen flex justify-center items-center">
-          <div className="bg-gray-800/40 px-5 sm:px-10 py-10 w-full max-w-[420px] rounded-lg">
+          <div className="bg-gray-900/40 px-5 sm:px-10 py-10 w-full max-w-[420px] rounded-lg">
             <p className="text-center text-2xl font-bold text-gray-300">
               Create an Account
             </p>
@@ -124,7 +125,7 @@ function SignupPage() {
               <div className="pt-4 pb-2">
                 <button
                   type="submit"
-                  className=" w-full bg-cyan-800  py-3 rounded text-sm font-bold text-gray-200 active:scale-95 transition duration-200"
+                  className=" w-full bg-cyan-900  py-3 rounded text-sm font-bold text-gray-200 active:scale-95 transition duration-200"
                 >
                   Submit
                 </button>

@@ -16,7 +16,7 @@ function Post({
   // console.log("likes", likes);
 
   return (
-    <div className="bg-black p-7 flex justify-between items-center gap-3 lg:gap-[100px] rounded-lg">
+    <div className="bg-gray-900 p-7 flex justify-between items-center gap-3 lg:gap-[100px] rounded-lg">
       <div className="">
         <div className="flex items-center gap-7">
           <p className="text-xl font-medium text-gray-300">{title}</p>
